@@ -17,7 +17,7 @@ class UserIdentity extends CUserIdentity
 	 */
 	public function authenticate()
 	{
-            $users = Users::model()->findByAttributes(array('username'=>$this->username));
+            $users = Qaname::model()->findByAttributes(array('username'=>$this->username));
             if($users === null)
             {
                 $this->errorCode=self::ERROR_USERNAME_INVALID;

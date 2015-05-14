@@ -1,10 +1,10 @@
 <?php
 return array (
   'template' => 'default',
-  'connectionId' => 'db',
+  'connectionId' => 'db2',
   'tablePrefix' => '',
   'modelPath' => 'application.models',
   'baseClass' => 'CActiveRecord',
-  'buildRelations' => '1',
+  'buildRelations' => '0',
   'commentsAsLabels' => '0',
 );

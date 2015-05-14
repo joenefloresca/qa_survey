@@ -70,6 +70,13 @@ return array(
 
 		// database settings are configured in database.php
 		'db'=>require(dirname(__FILE__).'/database.php'),
+                // postgre sql
+                'db2'=>array(
+                    'class'=>'CDbConnection',
+                    'connectionString'=>'pgsql:host=192.168.3.9;dbname=qdf_reporting','username'=> 'postgres', 'password'=> 'postgres'
+                ),
+
+                
 
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
