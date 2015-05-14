@@ -143,6 +143,7 @@ class FormsController extends Controller
                     $criteria->compare('DateTime', $q, true, 'OR');
                     $criteria->compare('EvaluatedBy', $q, true, 'OR');
                     $criteria->compare('PhoneNumber', $q, true, 'OR');
+                    $criteria->compare('ProcessedBy', $q, true, 'OR');
                 }
             } 
             

@@ -28,6 +28,7 @@ value="<?=isset($_GET['q']) ? CHtml::encode($_GET['q']) : '' ;
         <option value="DateTime">Date Time</option>
         <option value="EvaluatedBy">Evaluated By</option>
         <option value="PhoneNumber">Phone Number</option>
+        <option value="ProcessedBy">Processed By</option>
 </select>
 <input type="submit" value="Search" />
 </form>

@@ -29,9 +29,13 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('EvaluatedBy')); ?>:</b>
 	<?php echo CHtml::encode($data->EvaluatedBy); ?>
 	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('PhoneNumber')); ?>:</b>
+        
+        <b><?php echo CHtml::encode($data->getAttributeLabel('PhoneNumber')); ?>:</b>
 	<?php echo CHtml::encode($data->PhoneNumber); ?>
+	<br />
+        
+        <b><?php echo CHtml::encode($data->getAttributeLabel('ProcessedBy')); ?>:</b>
+	<?php echo CHtml::encode($data->ProcessedBy); ?>
 	<br />
         
         <br />
