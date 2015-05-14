@@ -65,5 +65,6 @@ $this->menu=array(
 		'NACounts',
 		'AutoFail',
 		'QualityScore',
+		'ProcessedBy',
 	),
 )); ?>

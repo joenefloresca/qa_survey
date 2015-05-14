@@ -51,7 +51,6 @@
                             'activeCssClass' => 'active',
                             'activateParents' => true,
                             'items'=>array(
-                            	//array('label'=>'Home', 'url'=>array('/site/index')),
                                 array('label'=>'Forms', 'url'=>array('/forms/')),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'))
                             ),

@@ -90,7 +90,11 @@ $form=$this->beginWidget('CActiveForm', array(
             </tr>
         </table>
 
-	
+	<div class="row">
+		<?php echo $form->labelEx($model,'ProcessedBy'); ?>
+		<?php echo $form->textField($model,'ProcessedBy',array('size'=>50,'maxlength'=>50, 'value'=>Yii::app()->user->name, 'hidden'=>'hidden')); ?>
+		<?php echo $form->error($model,'ProcessedBy'); ?>
+	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'MandatoryIsStated'); ?>

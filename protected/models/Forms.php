@@ -48,6 +48,7 @@
  * @property integer $NACounts
  * @property string $AutoFail
  * @property double $QualityScore
+ * @property string $ProcessedBy
  */
 class Forms extends CActiveRecord
 {
@@ -70,10 +71,10 @@ class Forms extends CActiveRecord
 			array('AgentName, TeamLeaderManager, Campaign, DateTime, EvaluatedBy, PhoneNumber, MandatoryIsStated, AgentIsPitch, MandatoryOptIsStated, WaitMandatoryOptIsStated, IsRecordingDisclosed, IsCustomerPermanentResident, IsCustomerAddressVerified, IsCustomerAddressAccurate, IsCustomerNameVerified, IsCustomerNameCapturedCRM, IsCustomerAgeVerified, IsCustomerAgeBracketCaptured, IsCustomerHomeStatusVerified, IsCustomerHomeStatusVerifiedCRM, IsCustomerEmpploymentStatusVerified, IsCustomerEmpploymentStatusVerifiedCRM, IsMaritalStatusVerified, IsMaritalStatusVerifiedCRM, IsMarketingQuestionsRead, IsMarketingQuestionsReadCRM, IsBreakingCycleFollowed, IsPositiveResponsesValidated, IsAngentExpressUnderstable, IsAppropriateTerms, IsVocalQualityPracticed, IsPoliteAcknowledgement, IsCorrectInformation, IsStandardRebuttals, IsMandatoryClosingStateMent, IsCustomerNotInLine, IsNotInterrupted, IsEmphatized, YesCounts, NoCounts, NACounts, AutoFail, QualityScore', 'required'),
 			array('YesCounts, NoCounts, NACounts', 'numerical', 'integerOnly'=>true),
 			array('QualityScore', 'numerical'),
-			array('AgentName, TeamLeaderManager, Campaign, EvaluatedBy, PhoneNumber, MandatoryIsStated, AgentIsPitch, MandatoryOptIsStated, WaitMandatoryOptIsStated, IsRecordingDisclosed, IsCustomerPermanentResident, IsCustomerAddressVerified, IsCustomerAddressAccurate, IsCustomerNameVerified, IsCustomerNameCapturedCRM, IsCustomerAgeVerified, IsCustomerAgeBracketCaptured, IsCustomerHomeStatusVerified, IsCustomerHomeStatusVerifiedCRM, IsCustomerEmpploymentStatusVerified, IsCustomerEmpploymentStatusVerifiedCRM, IsMaritalStatusVerified, IsMaritalStatusVerifiedCRM, IsMarketingQuestionsRead, IsMarketingQuestionsReadCRM, IsBreakingCycleFollowed, IsPositiveResponsesValidated, IsAngentExpressUnderstable, IsAppropriateTerms, IsVocalQualityPracticed, IsPoliteAcknowledgement, IsCorrectInformation, IsStandardRebuttals, IsMandatoryClosingStateMent, IsCustomerNotInLine, IsNotInterrupted, IsEmphatized, AutoFail', 'length', 'max'=>50),
+			array('AgentName, TeamLeaderManager, Campaign, EvaluatedBy, PhoneNumber, MandatoryIsStated, AgentIsPitch, MandatoryOptIsStated, WaitMandatoryOptIsStated, IsRecordingDisclosed, IsCustomerPermanentResident, IsCustomerAddressVerified, IsCustomerAddressAccurate, IsCustomerNameVerified, IsCustomerNameCapturedCRM, IsCustomerAgeVerified, IsCustomerAgeBracketCaptured, IsCustomerHomeStatusVerified, IsCustomerHomeStatusVerifiedCRM, IsCustomerEmpploymentStatusVerified, IsCustomerEmpploymentStatusVerifiedCRM, IsMaritalStatusVerified, IsMaritalStatusVerifiedCRM, IsMarketingQuestionsRead, IsMarketingQuestionsReadCRM, IsBreakingCycleFollowed, IsPositiveResponsesValidated, IsAngentExpressUnderstable, IsAppropriateTerms, IsVocalQualityPracticed, IsPoliteAcknowledgement, IsCorrectInformation, IsStandardRebuttals, IsMandatoryClosingStateMent, IsCustomerNotInLine, IsNotInterrupted, IsEmphatized, AutoFail, ProcessedBy', 'length', 'max'=>50),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('ID, AgentName, TeamLeaderManager, Campaign, DateTime, EvaluatedBy, PhoneNumber, MandatoryIsStated, AgentIsPitch, MandatoryOptIsStated, WaitMandatoryOptIsStated, IsRecordingDisclosed, IsCustomerPermanentResident, IsCustomerAddressVerified, IsCustomerAddressAccurate, IsCustomerNameVerified, IsCustomerNameCapturedCRM, IsCustomerAgeVerified, IsCustomerAgeBracketCaptured, IsCustomerHomeStatusVerified, IsCustomerHomeStatusVerifiedCRM, IsCustomerEmpploymentStatusVerified, IsCustomerEmpploymentStatusVerifiedCRM, IsMaritalStatusVerified, IsMaritalStatusVerifiedCRM, IsMarketingQuestionsRead, IsMarketingQuestionsReadCRM, IsBreakingCycleFollowed, IsPositiveResponsesValidated, IsAngentExpressUnderstable, IsAppropriateTerms, IsVocalQualityPracticed, IsPoliteAcknowledgement, IsCorrectInformation, IsStandardRebuttals, IsMandatoryClosingStateMent, IsCustomerNotInLine, IsNotInterrupted, IsEmphatized, YesCounts, NoCounts, NACounts, AutoFail, QualityScore', 'safe', 'on'=>'search'),
+			array('ID, AgentName, TeamLeaderManager, Campaign, DateTime, EvaluatedBy, PhoneNumber, MandatoryIsStated, AgentIsPitch, MandatoryOptIsStated, WaitMandatoryOptIsStated, IsRecordingDisclosed, IsCustomerPermanentResident, IsCustomerAddressVerified, IsCustomerAddressAccurate, IsCustomerNameVerified, IsCustomerNameCapturedCRM, IsCustomerAgeVerified, IsCustomerAgeBracketCaptured, IsCustomerHomeStatusVerified, IsCustomerHomeStatusVerifiedCRM, IsCustomerEmpploymentStatusVerified, IsCustomerEmpploymentStatusVerifiedCRM, IsMaritalStatusVerified, IsMaritalStatusVerifiedCRM, IsMarketingQuestionsRead, IsMarketingQuestionsReadCRM, IsBreakingCycleFollowed, IsPositiveResponsesValidated, IsAngentExpressUnderstable, IsAppropriateTerms, IsVocalQualityPracticed, IsPoliteAcknowledgement, IsCorrectInformation, IsStandardRebuttals, IsMandatoryClosingStateMent, IsCustomerNotInLine, IsNotInterrupted, IsEmphatized, YesCounts, NoCounts, NACounts, AutoFail, QualityScore, ProcessedBy', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -141,6 +142,8 @@ class Forms extends CActiveRecord
 			'QualityScore' => 'Quality Score',
 			'WaitMandatoryOptIsStated' => 'Did the agent wait for the customer\'s  <br />response to the Mandatory Opt In? <br />',
 			'IsAppropriateTerms' => 'Did the agent use appropriate terms and/or <br /> expressions when asking or explaining to customer?<br />',
+			'ProcessedBy' => 'Processed By',
+                        
 		);
 	}
 
@@ -206,6 +209,7 @@ class Forms extends CActiveRecord
 		$criteria->compare('NACounts',$this->NACounts);
 		$criteria->compare('AutoFail',$this->AutoFail,true);
 		$criteria->compare('QualityScore',$this->QualityScore);
+		$criteria->compare('ProcessedBy',$this->ProcessedBy);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -222,7 +226,7 @@ class Forms extends CActiveRecord
                      IsCustomerEmpploymentStatusVerified, IsCustomerEmpploymentStatusVerifiedCRM, IsMaritalStatusVerified, IsMaritalStatusVerifiedCRM, IsMarketingQuestionsRead, IsMarketingQuestionsReadCRM,
                      IsBreakingCycleFollowed, IsPositiveResponsesValidated, IsAngentExpressUnderstable, IsAppropriateTerms, IsVocalQualityPracticed,
                      IsPoliteAcknowledgement, IsCorrectInformation, IsStandardRebuttals, IsMandatoryClosingStateMent, IsCustomerNotInLine,
-                     IsNotInterrupted, IsEmphatized, YesCounts, NoCounts, NACounts, AutoFail, QualityScore')
+                     IsNotInterrupted, IsEmphatized, YesCounts, NoCounts, NACounts, AutoFail, QualityScore, ProcessedBy')
             ->from('forms')
             ->where('id=:id', array(':id'=>$id))
             ->queryAll();

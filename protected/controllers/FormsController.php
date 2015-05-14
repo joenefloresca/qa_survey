@@ -168,10 +168,12 @@ class FormsController extends Controller
 		));
 	}
         
+        /**
+	 * Export Data to Excel
+	 */
         public function actionExportData($id)
         {
-      
-         
+           
             $phpExcelPath = Yii::getPathOfAlias('ext.phpexcel.Classes');
  
             // Turn off our amazing library autoload 
@@ -239,6 +241,7 @@ class FormsController extends Controller
             $objPHPExcel->getActiveSheet()->SetCellValue('D45', $result[0]['QualityScore']);
             $objPHPExcel->getActiveSheet()->SetCellValue('C5', $result[0]['QualityScore']);
             $objPHPExcel->getActiveSheet()->SetCellValue('C6', $result[0]['AutoFail']);
+            $objPHPExcel->getActiveSheet()->SetCellValue('C7', $result[0]['ProcessedBy']);
             
             $filename=mt_rand(1,100000).'.xlsx'; //just some random filename
             if ( headers_sent() ) die("**Error: headers sent");
