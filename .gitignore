@@ -42,4 +42,4 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-/runtime/application.log
+protected/runtime/application.log
