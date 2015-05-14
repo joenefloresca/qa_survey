@@ -4237,3 +4237,6 @@ Stack trace:
 #24 {main}
 REQUEST_URI=/qa_survey/index.php/forms/admin
 ---
+2015/05/14 10:03:10 [warning] [application] Failed to set unsafe attribute "DateTime" of "Forms".
+in C:\wamp\www\qa_survey\protected\controllers\FormsController.php (72)
+in C:\wamp\www\qa_survey\index.php (13)
