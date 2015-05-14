@@ -127,18 +127,25 @@ class FormsController extends Controller
 //			'dataProvider'=>$dataProvider,
 //		));
             $criteria = new CDbCriteria();
-
-            if(isset($_GET['q']))
+            // Search based from Filter
+            if(isset($_GET['q']) && isset($_GET['filter']))
             {
                 $q = $_GET['q'];
-                $criteria->compare('ID', $q, true, 'OR');
-                $criteria->compare('AgentName', $q, true, 'OR');
-                $criteria->compare('TeamLeaderManager', $q, true, 'OR');
-                $criteria->compare('Campaign', $q, true, 'OR');
-                $criteria->compare('PhoneNumber', $q, true, 'OR');
-                $criteria->compare('EvaluatedBy', $q, true, 'OR');
-            }
-
+                if($_GET['q'] != "" && $_GET['filter'] != "")
+                {
+                   $criteria->compare($_GET['filter'], $q, true, 'OR'); 
+                }
+                else // If no Filter Selected
+                {
+                    $criteria->compare('ID', $q, true, 'OR');
+                    $criteria->compare('AgentName', $q, true, 'OR');
+                    $criteria->compare('TeamLeaderManager', $q, true, 'OR');
+                    $criteria->compare('DateTime', $q, true, 'OR');
+                    $criteria->compare('EvaluatedBy', $q, true, 'OR');
+                    $criteria->compare('PhoneNumber', $q, true, 'OR');
+                }
+            } 
+            
             $dataProvider=new CActiveDataProvider("Forms", array('criteria'=>$criteria));
 
             $this->render('index',array(
