@@ -23,7 +23,7 @@
 		//config
 		public $autoWidth = true;
 		public $exportType = 'Excel5';
-		public $disablePaging = true;
+		public $disablePaging = false; // Set to true if you want to disable pagination
 		public $filename = null; //export FileName
 		public $stream = true; //stream to browser
 		public $grid_mode = 'grid'; //Whether to display grid ot export it to selected format. Possible values(grid, export)
