@@ -9,7 +9,7 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'List Forms', 'url'=>array('index')),
-	array('label'=>'Manage Forms', 'url'=>array('admin')),
+	//array('label'=>'Manage Forms', 'url'=>array('admin')),
 );
 ?>
 
