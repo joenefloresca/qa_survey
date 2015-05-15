@@ -5192,3 +5192,1410 @@ Stack trace:
 #22 {main}
 REQUEST_URI=/qa_survey/index.php/forms/admin
 ---
+2015/05/14 10:48:00 [error] [exception.CException] exception 'CException' with message 'List data must be an array or an object implementing Traversable.' in C:\wamp\www\yii\framework\collections\CList.php:273
+Stack trace:
+#0 C:\wamp\www\yii\framework\collections\CList.php(63): CList->copyFrom(Object(FormsController))
+#1 C:\wamp\www\yii\framework\web\CWidgetFactory.php(147): CList->__construct(Object(FormsController))
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(FormsController), 'zii.widgets.CLi...', Array)
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#4 C:\wamp\www\qa_survey\protected\views\forms\index.php(28): CBaseController->widget('zii.widgets.CLi...', Array)
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\qa_...')
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\qa_...', Array, true)
+#7 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\qa_...', Array, true)
+#8 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#9 C:\wamp\www\qa_survey\protected\controllers\FormsController.php(146): CController->render('index', Array)
+#10 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): FormsController->actionIndex()
+#11 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#20 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('forms/index')
+#21 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#22 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/qa_survey/index.php/forms/index
+---
+2015/05/14 11:09:31 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%299%'' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `forms` `t` WHERE  LIKE :ycp0.
+in C:\wamp\www\qa_survey\protected\views\forms\index.php (43)
+in C:\wamp\www\qa_survey\protected\controllers\FormsController.php (147)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 11:09:31 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%299%'' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `forms` `t` WHERE  LIKE :ycp0' in C:\wamp\www\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1606): CDbCommand->queryScalar()
+#2 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\wamp\www\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 C:\wamp\www\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#7 C:\wamp\www\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(147): CListView->init()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#10 C:\wamp\www\qa_survey\protected\views\forms\index.php(43): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\qa_...')
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\qa_...', Array, true)
+#13 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\qa_...', Array, true)
+#14 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#15 C:\wamp\www\qa_survey\protected\controllers\FormsController.php(147): CController->render('index', Array)
+#16 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): FormsController->actionIndex()
+#17 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#26 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('forms')
+#27 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#28 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/qa_survey/index.php/forms/?q=299&filter=
+HTTP_REFERER=http://localhost/qa_survey/index.php/forms/?q=&filter=
+---
+2015/05/14 11:13:07 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%123%'' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `forms` `t` WHERE  LIKE :ycp0.
+in C:\wamp\www\qa_survey\protected\views\forms\index.php (43)
+in C:\wamp\www\qa_survey\protected\controllers\FormsController.php (142)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 11:13:07 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%123%'' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `forms` `t` WHERE  LIKE :ycp0' in C:\wamp\www\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1606): CDbCommand->queryScalar()
+#2 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\wamp\www\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 C:\wamp\www\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#7 C:\wamp\www\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(147): CListView->init()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#10 C:\wamp\www\qa_survey\protected\views\forms\index.php(43): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\qa_...')
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\qa_...', Array, true)
+#13 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\qa_...', Array, true)
+#14 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#15 C:\wamp\www\qa_survey\protected\controllers\FormsController.php(142): CController->render('index', Array)
+#16 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): FormsController->actionIndex()
+#17 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#26 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('forms')
+#27 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#28 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/qa_survey/index.php/forms/?q=123&filter=
+HTTP_REFERER=http://localhost/qa_survey/index.php/forms/
+---
+2015/05/14 11:13:55 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%aa%'' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `forms` `t` WHERE  LIKE :ycp0.
+in C:\wamp\www\qa_survey\protected\views\forms\index.php (43)
+in C:\wamp\www\qa_survey\protected\controllers\FormsController.php (142)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 11:13:55 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%aa%'' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `forms` `t` WHERE  LIKE :ycp0' in C:\wamp\www\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1606): CDbCommand->queryScalar()
+#2 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\wamp\www\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 C:\wamp\www\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#7 C:\wamp\www\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(147): CListView->init()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#10 C:\wamp\www\qa_survey\protected\views\forms\index.php(43): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\qa_...')
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\qa_...', Array, true)
+#13 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\qa_...', Array, true)
+#14 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#15 C:\wamp\www\qa_survey\protected\controllers\FormsController.php(142): CController->render('index', Array)
+#16 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): FormsController->actionIndex()
+#17 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#26 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('forms')
+#27 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#28 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/qa_survey/index.php/forms/?q=aa&filter=
+HTTP_REFERER=http://localhost/qa_survey/index.php/forms/?q=&filter=
+---
+2015/05/14 11:13:56 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%aa%'' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `forms` `t` WHERE  LIKE :ycp0.
+in C:\wamp\www\qa_survey\protected\views\forms\index.php (43)
+in C:\wamp\www\qa_survey\protected\controllers\FormsController.php (142)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 11:13:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%aa%'' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `forms` `t` WHERE  LIKE :ycp0' in C:\wamp\www\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1606): CDbCommand->queryScalar()
+#2 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\wamp\www\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 C:\wamp\www\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#7 C:\wamp\www\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(147): CListView->init()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#10 C:\wamp\www\qa_survey\protected\views\forms\index.php(43): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\qa_...')
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\qa_...', Array, true)
+#13 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\qa_...', Array, true)
+#14 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#15 C:\wamp\www\qa_survey\protected\controllers\FormsController.php(142): CController->render('index', Array)
+#16 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): FormsController->actionIndex()
+#17 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#26 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('forms')
+#27 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#28 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/qa_survey/index.php/forms/?q=aa&filter=
+---
+2015/05/14 11:18:27 [error] [php] Undefined index: q (C:\wamp\www\qa_survey\protected\controllers\FormsController.php:138)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): FormsController->runAction()
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): FormsController->filterAccessControl()
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): FormsController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): FormsController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\qa_survey\index.php(13): CWebApplication->run()
+REQUEST_URI=/qa_survey/index.php/forms/
+in C:\wamp\www\qa_survey\protected\controllers\FormsController.php (138)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 11:18:33 [error] [php] Undefined index: q (C:\wamp\www\qa_survey\protected\controllers\FormsController.php:138)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): FormsController->runAction()
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): FormsController->filterAccessControl()
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): FormsController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): FormsController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\qa_survey\index.php(13): CWebApplication->run()
+REQUEST_URI=/qa_survey/index.php/forms
+in C:\wamp\www\qa_survey\protected\controllers\FormsController.php (138)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 11:18:56 [error] [php] Undefined index: q (C:\wamp\www\qa_survey\protected\controllers\FormsController.php:138)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): FormsController->runAction()
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): FormsController->filterAccessControl()
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): FormsController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): FormsController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\qa_survey\index.php(13): CWebApplication->run()
+REQUEST_URI=/qa_survey/index.php/forms
+in C:\wamp\www\qa_survey\protected\controllers\FormsController.php (138)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 11:18:58 [error] [php] Undefined index: q (C:\wamp\www\qa_survey\protected\controllers\FormsController.php:138)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): FormsController->runAction()
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): FormsController->filterAccessControl()
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): FormsController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): FormsController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\qa_survey\index.php(13): CWebApplication->run()
+REQUEST_URI=/qa_survey/index.php/forms
+in C:\wamp\www\qa_survey\protected\controllers\FormsController.php (138)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 11:19:34 [error] [php] Undefined index: q (C:\wamp\www\qa_survey\protected\controllers\FormsController.php:138)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): FormsController->runAction()
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): FormsController->filterAccessControl()
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): FormsController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): FormsController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\qa_survey\index.php(13): CWebApplication->run()
+REQUEST_URI=/qa_survey/index.php/forms
+in C:\wamp\www\qa_survey\protected\controllers\FormsController.php (138)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 11:19:46 [error] [php] Undefined index: q (C:\wamp\www\qa_survey\protected\controllers\FormsController.php:138)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): FormsController->runAction()
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): FormsController->filterAccessControl()
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): FormsController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): FormsController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\qa_survey\index.php(13): CWebApplication->run()
+REQUEST_URI=/qa_survey/index.php/forms
+in C:\wamp\www\qa_survey\protected\controllers\FormsController.php (138)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 11:20:03 [error] [php] Undefined index: q (C:\wamp\www\qa_survey\protected\controllers\FormsController.php:138)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): FormsController->runAction()
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): FormsController->filterAccessControl()
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): FormsController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): FormsController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\qa_survey\index.php(13): CWebApplication->run()
+REQUEST_URI=/qa_survey/index.php/forms
+in C:\wamp\www\qa_survey\protected\controllers\FormsController.php (138)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 11:20:13 [error] [php] Undefined index: q (C:\wamp\www\qa_survey\protected\controllers\FormsController.php:138)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): FormsController->runAction()
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): FormsController->filterAccessControl()
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): FormsController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): FormsController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\qa_survey\index.php(13): CWebApplication->run()
+REQUEST_URI=/qa_survey/index.php/forms
+in C:\wamp\www\qa_survey\protected\controllers\FormsController.php (138)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 11:20:25 [error] [php] Undefined index: q (C:\wamp\www\qa_survey\protected\controllers\FormsController.php:138)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): FormsController->runAction()
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): FormsController->filterAccessControl()
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): FormsController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): FormsController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\qa_survey\index.php(13): CWebApplication->run()
+REQUEST_URI=/qa_survey/index.php/forms
+in C:\wamp\www\qa_survey\protected\controllers\FormsController.php (138)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 11:22:05 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%299%'' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `forms` `t` WHERE  LIKE :ycp0.
+in C:\wamp\www\qa_survey\protected\views\forms\index.php (37)
+in C:\wamp\www\qa_survey\protected\controllers\FormsController.php (152)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 11:22:05 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%299%'' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `forms` `t` WHERE  LIKE :ycp0' in C:\wamp\www\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1606): CDbCommand->queryScalar()
+#2 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\wamp\www\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 C:\wamp\www\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#7 C:\wamp\www\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(147): CListView->init()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#10 C:\wamp\www\qa_survey\protected\views\forms\index.php(37): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\qa_...')
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\qa_...', Array, true)
+#13 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\qa_...', Array, true)
+#14 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#15 C:\wamp\www\qa_survey\protected\controllers\FormsController.php(152): CController->render('index', Array)
+#16 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): FormsController->actionIndex()
+#17 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#26 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('forms')
+#27 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#28 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/qa_survey/index.php/forms?q=299&filter=
+HTTP_REFERER=http://localhost/qa_survey/index.php/forms?q=&filter=
+---
+2015/05/14 11:22:05 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%299%'' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `forms` `t` WHERE  LIKE :ycp0.
+in C:\wamp\www\qa_survey\protected\views\forms\index.php (37)
+in C:\wamp\www\qa_survey\protected\controllers\FormsController.php (152)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 11:22:05 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%299%'' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `forms` `t` WHERE  LIKE :ycp0' in C:\wamp\www\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1606): CDbCommand->queryScalar()
+#2 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\wamp\www\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 C:\wamp\www\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#7 C:\wamp\www\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(147): CListView->init()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#10 C:\wamp\www\qa_survey\protected\views\forms\index.php(37): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\qa_...')
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\qa_...', Array, true)
+#13 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\qa_...', Array, true)
+#14 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#15 C:\wamp\www\qa_survey\protected\controllers\FormsController.php(152): CController->render('index', Array)
+#16 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): FormsController->actionIndex()
+#17 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#26 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('forms')
+#27 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#28 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/qa_survey/index.php/forms?q=299&filter=
+---
+2015/05/14 11:22:52 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%299%'' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `forms` `t` WHERE  LIKE :ycp0.
+in C:\wamp\www\qa_survey\protected\views\forms\index.php (37)
+in C:\wamp\www\qa_survey\protected\controllers\FormsController.php (153)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 11:22:52 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%299%'' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `forms` `t` WHERE  LIKE :ycp0' in C:\wamp\www\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1606): CDbCommand->queryScalar()
+#2 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\wamp\www\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 C:\wamp\www\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#7 C:\wamp\www\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(147): CListView->init()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#10 C:\wamp\www\qa_survey\protected\views\forms\index.php(37): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\qa_...')
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\qa_...', Array, true)
+#13 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\qa_...', Array, true)
+#14 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#15 C:\wamp\www\qa_survey\protected\controllers\FormsController.php(153): CController->render('index', Array)
+#16 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): FormsController->actionIndex()
+#17 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#26 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('forms')
+#27 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#28 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/qa_survey/index.php/forms?q=299&filter=
+HTTP_REFERER=http://localhost/qa_survey/index.php/forms?q=&filter=
+---
+2015/05/14 11:22:52 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%299%'' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `forms` `t` WHERE  LIKE :ycp0.
+in C:\wamp\www\qa_survey\protected\views\forms\index.php (37)
+in C:\wamp\www\qa_survey\protected\controllers\FormsController.php (153)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 11:22:52 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%299%'' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `forms` `t` WHERE  LIKE :ycp0' in C:\wamp\www\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1606): CDbCommand->queryScalar()
+#2 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\wamp\www\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 C:\wamp\www\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#7 C:\wamp\www\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(147): CListView->init()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#10 C:\wamp\www\qa_survey\protected\views\forms\index.php(37): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\qa_...')
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\qa_...', Array, true)
+#13 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\qa_...', Array, true)
+#14 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#15 C:\wamp\www\qa_survey\protected\controllers\FormsController.php(153): CController->render('index', Array)
+#16 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): FormsController->actionIndex()
+#17 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#26 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('forms')
+#27 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#28 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/qa_survey/index.php/forms?q=299&filter=
+---
+2015/05/14 11:23:45 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%298%'' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `forms` `t` WHERE  LIKE :ycp0.
+in C:\wamp\www\qa_survey\protected\views\forms\index.php (37)
+in C:\wamp\www\qa_survey\protected\controllers\FormsController.php (153)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 11:23:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%298%'' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `forms` `t` WHERE  LIKE :ycp0' in C:\wamp\www\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1606): CDbCommand->queryScalar()
+#2 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\wamp\www\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 C:\wamp\www\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#7 C:\wamp\www\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(147): CListView->init()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#10 C:\wamp\www\qa_survey\protected\views\forms\index.php(37): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\qa_...')
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\qa_...', Array, true)
+#13 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\qa_...', Array, true)
+#14 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#15 C:\wamp\www\qa_survey\protected\controllers\FormsController.php(153): CController->render('index', Array)
+#16 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): FormsController->actionIndex()
+#17 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#26 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('forms')
+#27 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#28 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/qa_survey/index.php/forms?q=298&filter=
+HTTP_REFERER=http://localhost/qa_survey/index.php/forms
+---
+2015/05/14 11:23:45 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%298%'' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `forms` `t` WHERE  LIKE :ycp0.
+in C:\wamp\www\qa_survey\protected\views\forms\index.php (37)
+in C:\wamp\www\qa_survey\protected\controllers\FormsController.php (153)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 11:23:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%298%'' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `forms` `t` WHERE  LIKE :ycp0' in C:\wamp\www\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1606): CDbCommand->queryScalar()
+#2 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\wamp\www\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 C:\wamp\www\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#7 C:\wamp\www\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(147): CListView->init()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#10 C:\wamp\www\qa_survey\protected\views\forms\index.php(37): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\qa_...')
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\qa_...', Array, true)
+#13 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\qa_...', Array, true)
+#14 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#15 C:\wamp\www\qa_survey\protected\controllers\FormsController.php(153): CController->render('index', Array)
+#16 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): FormsController->actionIndex()
+#17 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#26 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('forms')
+#27 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#28 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/qa_survey/index.php/forms?q=298&filter=
+---
+2015/05/14 11:24:45 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%298%'' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `forms` `t` WHERE  LIKE :ycp0.
+in C:\wamp\www\qa_survey\protected\views\forms\index.php (37)
+in C:\wamp\www\qa_survey\protected\controllers\FormsController.php (154)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 11:24:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%298%'' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `forms` `t` WHERE  LIKE :ycp0' in C:\wamp\www\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1606): CDbCommand->queryScalar()
+#2 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\wamp\www\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 C:\wamp\www\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#7 C:\wamp\www\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(147): CListView->init()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#10 C:\wamp\www\qa_survey\protected\views\forms\index.php(37): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\qa_...')
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\qa_...', Array, true)
+#13 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\qa_...', Array, true)
+#14 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#15 C:\wamp\www\qa_survey\protected\controllers\FormsController.php(154): CController->render('index', Array)
+#16 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): FormsController->actionIndex()
+#17 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#26 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('forms')
+#27 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#28 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/qa_survey/index.php/forms?q=298&filter=
+---
+2015/05/14 11:24:45 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%298%'' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `forms` `t` WHERE  LIKE :ycp0.
+in C:\wamp\www\qa_survey\protected\views\forms\index.php (37)
+in C:\wamp\www\qa_survey\protected\controllers\FormsController.php (154)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 11:24:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%298%'' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `forms` `t` WHERE  LIKE :ycp0' in C:\wamp\www\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1606): CDbCommand->queryScalar()
+#2 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\wamp\www\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 C:\wamp\www\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#7 C:\wamp\www\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(147): CListView->init()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#10 C:\wamp\www\qa_survey\protected\views\forms\index.php(37): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\qa_...')
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\qa_...', Array, true)
+#13 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\qa_...', Array, true)
+#14 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#15 C:\wamp\www\qa_survey\protected\controllers\FormsController.php(154): CController->render('index', Array)
+#16 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): FormsController->actionIndex()
+#17 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#26 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('forms')
+#27 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#28 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/qa_survey/index.php/forms?q=298&filter=
+---
+2015/05/14 11:25:03 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%289%'' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `forms` `t` WHERE  LIKE :ycp0.
+in C:\wamp\www\qa_survey\protected\views\forms\index.php (37)
+in C:\wamp\www\qa_survey\protected\controllers\FormsController.php (154)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 11:25:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%289%'' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `forms` `t` WHERE  LIKE :ycp0' in C:\wamp\www\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1606): CDbCommand->queryScalar()
+#2 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\wamp\www\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 C:\wamp\www\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#7 C:\wamp\www\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(147): CListView->init()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#10 C:\wamp\www\qa_survey\protected\views\forms\index.php(37): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\qa_...')
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\qa_...', Array, true)
+#13 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\qa_...', Array, true)
+#14 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#15 C:\wamp\www\qa_survey\protected\controllers\FormsController.php(154): CController->render('index', Array)
+#16 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): FormsController->actionIndex()
+#17 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#26 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('forms')
+#27 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#28 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/qa_survey/index.php/forms?q=289&filter=
+HTTP_REFERER=http://localhost/qa_survey/index.php/forms
+---
+2015/05/14 11:25:03 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%289%'' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `forms` `t` WHERE  LIKE :ycp0.
+in C:\wamp\www\qa_survey\protected\views\forms\index.php (37)
+in C:\wamp\www\qa_survey\protected\controllers\FormsController.php (154)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 11:25:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%289%'' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `forms` `t` WHERE  LIKE :ycp0' in C:\wamp\www\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1606): CDbCommand->queryScalar()
+#2 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\wamp\www\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 C:\wamp\www\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#7 C:\wamp\www\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(147): CListView->init()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#10 C:\wamp\www\qa_survey\protected\views\forms\index.php(37): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\qa_...')
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\qa_...', Array, true)
+#13 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\qa_...', Array, true)
+#14 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#15 C:\wamp\www\qa_survey\protected\controllers\FormsController.php(154): CController->render('index', Array)
+#16 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): FormsController->actionIndex()
+#17 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#26 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('forms')
+#27 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#28 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/qa_survey/index.php/forms?q=289&filter=
+---
+2015/05/14 11:25:47 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%299%'' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `forms` `t` WHERE  LIKE :ycp0.
+in C:\wamp\www\qa_survey\protected\views\forms\index.php (37)
+in C:\wamp\www\qa_survey\protected\controllers\FormsController.php (154)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 11:25:47 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%299%'' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `forms` `t` WHERE  LIKE :ycp0' in C:\wamp\www\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1606): CDbCommand->queryScalar()
+#2 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\wamp\www\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 C:\wamp\www\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#7 C:\wamp\www\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(147): CListView->init()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#10 C:\wamp\www\qa_survey\protected\views\forms\index.php(37): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\qa_...')
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\qa_...', Array, true)
+#13 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\qa_...', Array, true)
+#14 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#15 C:\wamp\www\qa_survey\protected\controllers\FormsController.php(154): CController->render('index', Array)
+#16 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): FormsController->actionIndex()
+#17 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#26 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('forms')
+#27 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#28 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/qa_survey/index.php/forms?q=299&filter=
+HTTP_REFERER=http://localhost/qa_survey/index.php/forms
+---
+2015/05/14 11:25:47 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%299%'' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `forms` `t` WHERE  LIKE :ycp0.
+in C:\wamp\www\qa_survey\protected\views\forms\index.php (37)
+in C:\wamp\www\qa_survey\protected\controllers\FormsController.php (154)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 11:25:47 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%299%'' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `forms` `t` WHERE  LIKE :ycp0' in C:\wamp\www\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1606): CDbCommand->queryScalar()
+#2 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\wamp\www\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 C:\wamp\www\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#7 C:\wamp\www\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(147): CListView->init()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#10 C:\wamp\www\qa_survey\protected\views\forms\index.php(37): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\qa_...')
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\qa_...', Array, true)
+#13 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\qa_...', Array, true)
+#14 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#15 C:\wamp\www\qa_survey\protected\controllers\FormsController.php(154): CController->render('index', Array)
+#16 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): FormsController->actionIndex()
+#17 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#26 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('forms')
+#27 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#28 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/qa_survey/index.php/forms?q=299&filter=
+---
+2015/05/14 11:26:37 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%299%'' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `forms` `t` WHERE  LIKE :ycp0.
+in C:\wamp\www\qa_survey\protected\views\forms\index.php (37)
+in C:\wamp\www\qa_survey\protected\controllers\FormsController.php (157)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 11:26:37 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%299%'' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `forms` `t` WHERE  LIKE :ycp0' in C:\wamp\www\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1606): CDbCommand->queryScalar()
+#2 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\wamp\www\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 C:\wamp\www\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#7 C:\wamp\www\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(147): CListView->init()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#10 C:\wamp\www\qa_survey\protected\views\forms\index.php(37): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\qa_...')
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\qa_...', Array, true)
+#13 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\qa_...', Array, true)
+#14 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#15 C:\wamp\www\qa_survey\protected\controllers\FormsController.php(157): CController->render('index', Array)
+#16 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): FormsController->actionIndex()
+#17 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#26 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('forms')
+#27 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#28 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/qa_survey/index.php/forms?q=299&filter=
+HTTP_REFERER=http://localhost/qa_survey/index.php/forms
+---
+2015/05/14 11:26:38 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%299%'' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `forms` `t` WHERE  LIKE :ycp0.
+in C:\wamp\www\qa_survey\protected\views\forms\index.php (37)
+in C:\wamp\www\qa_survey\protected\controllers\FormsController.php (157)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 11:26:38 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%299%'' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `forms` `t` WHERE  LIKE :ycp0' in C:\wamp\www\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1606): CDbCommand->queryScalar()
+#2 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\wamp\www\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 C:\wamp\www\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#7 C:\wamp\www\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(147): CListView->init()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#10 C:\wamp\www\qa_survey\protected\views\forms\index.php(37): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\qa_...')
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\qa_...', Array, true)
+#13 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\qa_...', Array, true)
+#14 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#15 C:\wamp\www\qa_survey\protected\controllers\FormsController.php(157): CController->render('index', Array)
+#16 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): FormsController->actionIndex()
+#17 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#26 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('forms')
+#27 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#28 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/qa_survey/index.php/forms?q=299&filter=
+---
+2015/05/14 11:54:09 [error] [exception.CException] exception 'CException' with message 'CCaptchaValidator.action "captcha" is invalid. Unable to find such an action in the current controller.' in C:\wamp\www\yii\framework\validators\CCaptchaValidator.php:77
+Stack trace:
+#0 C:\wamp\www\yii\framework\validators\CCaptchaValidator.php(93): CCaptchaValidator->getCaptchaAction()
+#1 C:\wamp\www\yii\framework\web\widgets\CActiveForm.php(510): CCaptchaValidator->clientValidateAttribute(Object(Users), 'verifyCode')
+#2 C:\wamp\www\qa_survey\protected\views\users\index.php(73): CActiveForm->error(Object(Users), 'verifyCode')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\qa_...')
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\qa_...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\qa_...', Array, true)
+#6 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#7 C:\wamp\www\qa_survey\protected\controllers\UsersController.php(28): CController->render('index', Array)
+#8 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): UsersController->actionIndex()
+#9 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('users/index')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/qa_survey/index.php/users/index
+HTTP_REFERER=http://localhost/qa_survey/index.php/forms
+---
+2015/05/14 11:58:04 [error] [exception.CException] exception 'CException' with message 'CCaptchaValidator.action "/frontend/main/captcha" is invalid. Unable to find such an action in the current controller.' in C:\wamp\www\yii\framework\validators\CCaptchaValidator.php:77
+Stack trace:
+#0 C:\wamp\www\yii\framework\validators\CCaptchaValidator.php(93): CCaptchaValidator->getCaptchaAction()
+#1 C:\wamp\www\yii\framework\web\widgets\CActiveForm.php(510): CCaptchaValidator->clientValidateAttribute(Object(Users), 'verifyCode')
+#2 C:\wamp\www\qa_survey\protected\views\users\index.php(73): CActiveForm->error(Object(Users), 'verifyCode')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\qa_...')
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\qa_...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\qa_...', Array, true)
+#6 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#7 C:\wamp\www\qa_survey\protected\controllers\UsersController.php(28): CController->render('index', Array)
+#8 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): UsersController->actionIndex()
+#9 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('users/index')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/qa_survey/index.php/users/index
+---
+2015/05/14 11:58:25 [error] [exception.CException] exception 'CException' with message 'CInlineAction and its behaviors do not have a method or closure named "getVerifyCode".' in C:\wamp\www\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp\www\yii\framework\validators\CCaptchaValidator.php(98): CComponent->__call('getVerifyCode', Array)
+#1 C:\wamp\www\yii\framework\validators\CCaptchaValidator.php(98): CInlineAction->getVerifyCode(false)
+#2 C:\wamp\www\yii\framework\web\widgets\CActiveForm.php(510): CCaptchaValidator->clientValidateAttribute(Object(Users), 'verifyCode')
+#3 C:\wamp\www\qa_survey\protected\views\users\index.php(73): CActiveForm->error(Object(Users), 'verifyCode')
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\qa_...')
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\qa_...', Array, true)
+#6 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\qa_...', Array, true)
+#7 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 C:\wamp\www\qa_survey\protected\controllers\UsersController.php(28): CController->render('index', Array)
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): UsersController->actionIndex()
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('users/index')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#16 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/qa_survey/index.php/users/index
+---
+2015/05/14 12:00:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "captcha".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('captcha')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('captcha')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('users/captcha')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/qa_survey/index.php/users/captcha?v=55547228ac5c3
+HTTP_REFERER=http://localhost/qa_survey/index.php/users/index
+---
+2015/05/14 12:00:09 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in C:\wamp\www\qa_survey\protected\controllers\UsersController.php (11)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 12:00:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "captcha".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('captcha')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('captcha')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('users/captcha')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/qa_survey/index.php/users/captcha?refresh=1&_=1431597608871
+HTTP_REFERER=http://localhost/qa_survey/index.php/users/index
+---
+2015/05/14 12:00:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "captcha".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('captcha')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('captcha')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('users/captcha')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/qa_survey/index.php/users/captcha?refresh=1&_=1431597608872
+HTTP_REFERER=http://localhost/qa_survey/index.php/users/index
+---
+2015/05/14 12:00:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "captcha".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('captcha')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('captcha')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('users/captcha')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/qa_survey/index.php/users/captcha?refresh=1&_=1431597608873
+HTTP_REFERER=http://localhost/qa_survey/index.php/users/index
+---
+2015/05/14 12:00:16 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in C:\wamp\www\qa_survey\protected\controllers\UsersController.php (11)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 12:00:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "captcha".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('captcha')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('captcha')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('users/captcha')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/qa_survey/index.php/users/captcha?refresh=1&_=1431597608874
+HTTP_REFERER=http://localhost/qa_survey/index.php/users/index
+---
+2015/05/14 12:00:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "captcha".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('captcha')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('captcha')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('users/captcha')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/qa_survey/index.php/users/captcha?refresh=1&_=1431597608875
+HTTP_REFERER=http://localhost/qa_survey/index.php/users/index
+---
+2015/05/14 12:00:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "captcha".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('captcha')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('captcha')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('users/captcha')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/qa_survey/index.php/users/captcha?refresh=1&_=1431597608876
+HTTP_REFERER=http://localhost/qa_survey/index.php/users/index
+---
+2015/05/14 12:00:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "captcha".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('captcha')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('captcha')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('users/captcha')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/qa_survey/index.php/users/captcha?refresh=1&_=1431597608877
+HTTP_REFERER=http://localhost/qa_survey/index.php/users/index
+---
+2015/05/14 12:00:22 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in C:\wamp\www\qa_survey\protected\controllers\UsersController.php (11)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 12:00:23 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in C:\wamp\www\qa_survey\protected\controllers\UsersController.php (11)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 12:00:27 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in C:\wamp\www\qa_survey\protected\controllers\UsersController.php (17)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 12:00:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "captcha".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('captcha')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('captcha')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('users/captcha')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/qa_survey/index.php/users/captcha?v=5554723e1ae83
+HTTP_REFERER=http://localhost/qa_survey/index.php/users/index
+---
+2015/05/14 12:00:30 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in C:\wamp\www\qa_survey\protected\controllers\UsersController.php (11)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 12:00:31 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in C:\wamp\www\qa_survey\protected\controllers\UsersController.php (17)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 12:00:32 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'username'. The SQL statement executed was: INSERT INTO `users` (`username`, `fname`, `lname`, `email`, `country`, `address`, `gender`, `pwd_hash`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in C:\wamp\www\qa_survey\protected\controllers\UsersController.php (20)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 12:00:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'username'. The SQL statement executed was: INSERT INTO `users` (`username`, `fname`, `lname`, `email`, `country`, `address`, `gender`, `pwd_hash`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7)' in C:\wamp\www\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\wamp\www\qa_survey\protected\controllers\UsersController.php(20): CActiveRecord->save()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): UsersController->actionIndex()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('users/index')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/qa_survey/index.php/users/index
+HTTP_REFERER=http://localhost/qa_survey/index.php/users/index
+---
+2015/05/14 12:00:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "captcha".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('captcha')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('captcha')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('users/captcha')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/qa_survey/index.php/users/captcha?v=555472430965d
+HTTP_REFERER=http://localhost/qa_survey/index.php/users/index
+---
+2015/05/14 12:00:35 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in C:\wamp\www\qa_survey\protected\controllers\UsersController.php (11)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 12:00:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "captcha".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('captcha')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('captcha')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('users/captcha')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/qa_survey/index.php/users/captcha?refresh=1&_=1431597635161
+HTTP_REFERER=http://localhost/qa_survey/index.php/users/index
+---
+2015/05/14 12:01:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "captcha".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('captcha')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('captcha')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('users/captcha')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/qa_survey/index.php/users/captcha?refresh=1&_=1431597635162
+HTTP_REFERER=http://localhost/qa_survey/index.php/users/index
+---
+2015/05/14 12:01:02 [warning] [application] Failed to set unsafe attribute "verifyCode" of "Users".
+in C:\wamp\www\qa_survey\protected\controllers\UsersController.php (11)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 12:02:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "captcha".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('captcha')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('captcha')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('users/captcha')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/qa_survey/index.php/users/captcha?refresh=1&_=1431597635163
+HTTP_REFERER=http://localhost/qa_survey/index.php/users/index
+---
+2015/05/14 12:02:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "captcha".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('captcha')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('captcha')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('users/captcha')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/qa_survey/index.php/users/captcha?refresh=1&_=1431597635164
+HTTP_REFERER=http://localhost/qa_survey/index.php/users/index
+---
+2015/05/14 12:02:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "captcha".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('captcha')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('captcha')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('users/captcha')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/qa_survey/index.php/users/captcha?refresh=1&_=1431597635165
+HTTP_REFERER=http://localhost/qa_survey/index.php/users/index
+---
+2015/05/14 12:06:04 [error] [php] include(password.php): failed to open stream: No such file or directory (C:\wamp\www\yii\framework\YiiBase.php:432)
+Stack trace:
+#0 unknown(0): spl_autoload_call()
+#1 C:\wamp\www\yii\framework\YiiBase.php(303): class_exists()
+#2 C:\wamp\www\yii\framework\validators\CValidator.php(174): import()
+#3 C:\wamp\www\yii\framework\base\CModel.php(287): createValidator()
+#4 C:\wamp\www\yii\framework\base\CModel.php(260): Users->createValidators()
+#5 C:\wamp\www\yii\framework\base\CModel.php(547): Users->getValidators()
+#6 C:\wamp\www\yii\framework\web\widgets\CActiveForm.php(567): Users->getSafeAttributeNames()
+#7 C:\wamp\www\qa_survey\protected\views\users\index.php(12): CActiveForm->errorSummary()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(95): UsersController->renderInternal()
+#10 C:\wamp\www\yii\framework\web\CController.php(869): UsersController->renderFile()
+#11 C:\wamp\www\yii\framework\web\CController.php(782): UsersController->renderPartial()
+#12 C:\wamp\www\qa_survey\protected\controllers\UsersController.php(28): UsersController->render()
+#13 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): UsersController->actionIndex()
+#14 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#15 C:\wamp\www\yii\framework\web\CController.php(286): UsersController->runAction()
+#16 C:\wamp\www\yii\framework\web\CController.php(265): UsersController->runActionWithFilters()
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(282): UsersController->run()
+#18 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#19 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#20 C:\wamp\www\qa_survey\index.php(13): CWebApplication->run()
+REQUEST_URI=/qa_survey/index.php/users/index
+in C:\wamp\www\qa_survey\protected\views\users\index.php (12)
+in C:\wamp\www\qa_survey\protected\controllers\UsersController.php (28)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 12:17:12 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'username'. The SQL statement executed was: INSERT INTO `users` (`username`, `fname`, `lname`, `email`, `country`, `address`, `gender`, `pwd_hash`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in C:\wamp\www\qa_survey\protected\controllers\UsersController.php (20)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 12:17:12 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'username'. The SQL statement executed was: INSERT INTO `users` (`username`, `fname`, `lname`, `email`, `country`, `address`, `gender`, `pwd_hash`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7)' in C:\wamp\www\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\wamp\www\qa_survey\protected\controllers\UsersController.php(20): CActiveRecord->save()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): UsersController->actionIndex()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('users/index')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/qa_survey/index.php/users/index
+HTTP_REFERER=http://localhost/qa_survey/index.php/users/index
+---
+2015/05/14 12:38:32 [error] [php] Undefined index: LoginForm (C:\wamp\www\qa_survey\protected\controllers\SiteController.php:81)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\wamp\www\qa_survey\index.php(13): CWebApplication->run()
+REQUEST_URI=/qa_survey/index.php/site/login
+in C:\wamp\www\qa_survey\protected\controllers\SiteController.php (81)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 12:38:47 [error] [php] Undefined index: LoginForm (C:\wamp\www\qa_survey\protected\controllers\SiteController.php:81)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\wamp\www\qa_survey\index.php(13): CWebApplication->run()
+REQUEST_URI=/qa_survey/index.php/site/login
+in C:\wamp\www\qa_survey\protected\controllers\SiteController.php (81)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 12:39:19 [error] [php] Undefined variable: model (C:\wamp\www\qa_survey\protected\controllers\SiteController.php:101)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\wamp\www\qa_survey\index.php(13): CWebApplication->run()
+REQUEST_URI=/qa_survey/index.php/site/login
+in C:\wamp\www\qa_survey\protected\controllers\SiteController.php (101)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 12:41:50 [error] [php] Undefined variable: model (C:\wamp\www\qa_survey\protected\views\site\login.php:28)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\wamp\www\qa_survey\protected\controllers\SiteController.php(102): SiteController->render()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\qa_survey\index.php(13): CWebApplication->run()
+REQUEST_URI=/qa_survey/index.php/site/login
+in C:\wamp\www\qa_survey\protected\views\site\login.php (28)
+in C:\wamp\www\qa_survey\protected\controllers\SiteController.php (102)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 12:45:54 [error] [exception.CException] exception 'CException' with message 'Object configuration must be an array containing a "class" element.' in C:\wamp\www\yii\framework\YiiBase.php:193
+Stack trace:
+#0 C:\wamp\www\yii\framework\base\CModule.php(393): YiiBase::createComponent(Array)
+#1 C:\wamp\www\yii\framework\base\CModule.php(103): CModule->getComponent('db2')
+#2 C:\wamp\www\qa_survey\protected\controllers\SiteController.php(95): CModule->__get('db2')
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/qa_survey/index.php/site/login
+HTTP_REFERER=http://localhost/qa_survey/index.php/site/login
+---
+2015/05/14 12:50:31 [error] [exception.CException] exception 'CException' with message 'Object configuration must be an array containing a "class" element.' in C:\wamp\www\yii\framework\YiiBase.php:193
+Stack trace:
+#0 C:\wamp\www\yii\framework\base\CModule.php(393): YiiBase::createComponent(Array)
+#1 C:\wamp\www\yii\framework\base\CModule.php(103): CModule->getComponent('db2')
+#2 C:\wamp\www\qa_survey\protected\controllers\SiteController.php(95): CModule->__get('db2')
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/qa_survey/index.php/site/login
+HTTP_REFERER=http://localhost/qa_survey/index.php/site/login
+---
+2015/05/14 12:53:33 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "aqname" does not exist
+LINE 2: FROM "aqname" "u"
+             ^. The SQL statement executed was: SELECT *
+FROM "aqname" "u".
+in C:\wamp\www\qa_survey\protected\controllers\SiteController.php (95)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 12:53:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "aqname" does not exist
+LINE 2: FROM "aqname" "u"
+             ^. The SQL statement executed was: SELECT *
+FROM "aqname" "u"' in C:\wamp\www\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\wamp\www\qa_survey\protected\controllers\SiteController.php(95): CDbCommand->queryRow()
+#2 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#3 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#8 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/qa_survey/index.php/site/login
+HTTP_REFERER=http://localhost/qa_survey/index.php/site/login
+---
+2015/05/14 12:54:21 [error] [php] Undefined variable: user (C:\wamp\www\qa_survey\protected\controllers\SiteController.php:95)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\wamp\www\qa_survey\index.php(13): CWebApplication->run()
+REQUEST_URI=/qa_survey/index.php/site/login
+in C:\wamp\www\qa_survey\protected\controllers\SiteController.php (95)
+in C:\wamp\www\qa_survey\index.php (13)
+2015/05/14 13:01:10 [error] [exception.CException] exception 'CException' with message 'Qaname and its behaviors do not have a method or closure named "check".' in C:\wamp\www\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(227): CComponent->__call('check', Array)
+#1 C:\wamp\www\qa_survey\protected\components\UserIdentity.php(26): CActiveRecord->__call('check', Array)
+#2 C:\wamp\www\qa_survey\protected\components\UserIdentity.php(26): Qaname->check('test')
+#3 C:\wamp\www\qa_survey\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#4 C:\wamp\www\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#5 C:\wamp\www\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 C:\wamp\www\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#7 C:\wamp\www\qa_survey\protected\controllers\SiteController.php(94): CModel->validate()
+#8 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#9 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/qa_survey/index.php/site/login
+HTTP_REFERER=http://localhost/qa_survey/index.php/site/login
+---
+2015/05/14 13:06:20 [error] [exception.CException] exception 'CException' with message 'Qaname and its behaviors do not have a method or closure named "check".' in C:\wamp\www\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(227): CComponent->__call('check', Array)
+#1 C:\wamp\www\qa_survey\protected\components\UserIdentity.php(26): CActiveRecord->__call('check', Array)
+#2 C:\wamp\www\qa_survey\protected\components\UserIdentity.php(26): Qaname->check('test')
+#3 C:\wamp\www\qa_survey\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#4 C:\wamp\www\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#5 C:\wamp\www\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 C:\wamp\www\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#7 C:\wamp\www\qa_survey\protected\controllers\SiteController.php(95): CModel->validate()
+#8 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#9 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/qa_survey/index.php/site/login
+HTTP_REFERER=http://localhost/qa_survey/index.php/site/login
+---
+2015/05/14 13:22:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "users/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('users/index')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/qa_survey/index.php/users/index
+HTTP_REFERER=http://localhost/qa_survey/index.php/site/login
+---
+2015/05/14 13:22:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "users/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('users/index')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/qa_survey/index.php/users/index
+HTTP_REFERER=http://localhost/qa_survey/index.php/site/login
+---
+2015/05/14 13:23:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "users/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('users/index')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/qa_survey/index.php/users/index
+HTTP_REFERER=http://localhost/qa_survey/index.php
+---
+2015/05/14 13:23:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "users/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('users/index')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/qa_survey/index.php/users/index
+HTTP_REFERER=http://localhost/qa_survey/index.php/users/index
+---
+2015/05/14 13:23:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "users/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('users/index')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/qa_survey/index.php/users/index
+HTTP_REFERER=http://localhost/qa_survey/index.php/site/login
+---
+2015/05/14 13:24:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "users/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('users/index')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\qa_survey\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/qa_survey/index.php/users/index
+HTTP_REFERER=http://localhost/qa_survey/index.php/users/index
+---
