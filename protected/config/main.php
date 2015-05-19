@@ -75,7 +75,14 @@ return array(
                     'class'=>'CDbConnection',
                     'connectionString'=>'pgsql:host=192.168.3.9;dbname=qdf_reporting','username'=> 'postgres', 'password'=> 'postgres'
                 ),
-
+            
+               'azure' => array(
+                    'class'=>'CDbConnection',
+                   'connectionString' => 'sqlsrv:Server=tcp:ybefh1h7kh.database.windows.net,1433;Database=test',
+                   'username' => 'joenefloresca',
+                   'password' => 'CheRambil27',
+               ),
+                
                 
 
 		'errorHandler'=>array(
@@ -91,11 +98,11 @@ return array(
 					'levels'=>'error, warning',
 				),
 				// uncomment the following to show log messages on web pages
-				/*
+				
 				array(
 					'class'=>'CWebLogRoute',
 				),
-				*/
+				
 			),
 		),
 
