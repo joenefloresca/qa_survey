@@ -169,97 +169,94 @@ class FormsController extends Controller
 		));
 	}
         
-        /**
-	 * Export Data to Excel
-	 */
-        public function actionExportData($id)
-        {
-           
-            $phpExcelPath = Yii::getPathOfAlias('ext.phpexcel.Classes');
- 
-            // Turn off our amazing library autoload 
-             //spl_autoload_unregister(array('YiiBase','autoload'));        
+    /**
+ 	* Export Data to Excel
+ 	*/
+    public function actionExportData($id)
+    {
+       
+        $phpExcelPath = Yii::getPathOfAlias('ext.phpexcel.Classes');
 
-            //spl_autoload_register(array('YiiBase','autoload'));
-            // making use of our reference, include the main class
-            // when we do this, phpExcel has its own autoload registration
-            // procedure (PHPExcel_Autoloader::Register();)
-           include($phpExcelPath . DIRECTORY_SEPARATOR . 'PHPExcel.php');
+        // Turn off our amazing library autoload 
+         //spl_autoload_unregister(array('YiiBase','autoload'));        
 
-            // Create new PHPExcel object
-            $objPHPExcel = new PHPExcel();
-            //$objPHPExcel = PHPExcel_IOFactory::load("C:/wamp/www/qa_survey/public/QA_Form.xlsx");
-            $objPHPExcel = PHPExcel_IOFactory::load("C:/wamp/www/qa_survey/public/QAFORM.xlsx");
-            
-            // Query Data from Database
-            $form = new Forms();
-            $result = $form->getData($id);
-            
-            // Assign Values
-            $objPHPExcel->setActiveSheetIndex(0);
-            $objPHPExcel->getActiveSheet()->SetCellValue('B2', 'NAME OF AGENT: '.$result[0]['AgentName']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('B3', 'TEAM LEADER/MANAGER: '.$result[0]['TeamLeaderManager']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('B4', 'CAMPAIGN: '.$result[0]['Campaign']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('C2', 'CALL DATE & TIME: '.$result[0]['DateTime']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('C3', 'EVALUATED BY: '.$result[0]['EvaluatedBy']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('C4', 'PHONE NUMBER : '.$result[0]['PhoneNumber']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('D9', $result[0]['MandatoryIsStated']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('D10', $result[0]['AgentIsPitch']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('D11', $result[0]['MandatoryOptIsStated']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('D12', $result[0]['WaitMandatoryOptIsStated']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('D13', $result[0]['IsRecordingDisclosed']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('D14', $result[0]['IsCustomerPermanentResident']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('D15', $result[0]['IsCustomerAddressVerified']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('D16', $result[0]['IsCustomerAddressAccurate']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('D17', $result[0]['IsCustomerNameVerified']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('D18', $result[0]['IsCustomerNameCapturedCRM']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('D19', $result[0]['IsCustomerAgeVerified']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('D20', $result[0]['IsCustomerAgeBracketCaptured']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('D21', $result[0]['IsCustomerHomeStatusVerified']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('D22', $result[0]['IsCustomerHomeStatusVerifiedCRM']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('D23', $result[0]['IsCustomerEmpploymentStatusVerified']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('D24', $result[0]['IsCustomerEmpploymentStatusVerifiedCRM']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('D25', $result[0]['IsMaritalStatusVerified']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('D26', $result[0]['IsMaritalStatusVerifiedCRM']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('D27', $result[0]['IsMarketingQuestionsRead']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('D28', $result[0]['IsMarketingQuestionsReadCRM']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('D29', $result[0]['IsBreakingCycleFollowed']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('D30', $result[0]['IsPositiveResponsesValidated']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('D31', $result[0]['IsAngentExpressUnderstable']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('D32', $result[0]['IsAppropriateTerms']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('D33', $result[0]['IsVocalQualityPracticed']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('D34', $result[0]['IsPoliteAcknowledgement']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('D35', $result[0]['IsCorrectInformation']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('D36', $result[0]['IsStandardRebuttals']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('D37', $result[0]['IsMandatoryClosingStateMent']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('D38', $result[0]['IsCustomerNotInLine']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('D39', $result[0]['IsNotInterrupted']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('D40', $result[0]['IsEmphatized']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('D41', $result[0]['YesCounts']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('D42', $result[0]['NoCounts']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('D43', $result[0]['NACounts']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('D44', $result[0]['AutoFail']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('D45', $result[0]['QualityScore']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('C5', $result[0]['QualityScore']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('C6', $result[0]['AutoFail']);
-            $objPHPExcel->getActiveSheet()->SetCellValue('C7', $result[0]['ProcessedBy']);
-            
-            $filename=mt_rand(1,100000).'.xlsx'; //just some random filename
-            if ( headers_sent() ) die("**Error: headers sent");
-      
-            header('Content-Type: application/vnd.ms-excel');
-            header('Cache-Control: max-age=0');
-            header('Content-Description: File Transfer');   
-            header('Content-Type: application/vnd.ms-excel');
-            header("Content-Disposition: attachment; filename=" . $filename);    
-            
-            $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');  //downloadable file is in Excel 2003 format (.xls)
-            $objWriter->save('php://output');  //send it to user, of course you can save
-         
-//            $this->render('view',array(
-//			'model'=>$this->loadModel($id),
-//		));
-        }
+        //spl_autoload_register(array('YiiBase','autoload'));
+        // making use of our reference, include the main class
+        // when we do this, phpExcel has its own autoload registration
+        // procedure (PHPExcel_Autoloader::Register();)
+       include($phpExcelPath . DIRECTORY_SEPARATOR . 'PHPExcel.php');
+
+        // Create new PHPExcel object
+        $objPHPExcel = new PHPExcel();
+        //$objPHPExcel = PHPExcel_IOFactory::load("C:/wamp/www/qa_survey/public/QA_Form.xlsx");
+        $objPHPExcel = PHPExcel_IOFactory::load("C:/wamp/www/qa_survey/public/QAFORM.xlsx");
+        
+        // Query Data from Database
+        $form = new Forms();
+        $result = $form->getData($id);
+        
+        // Assign Values
+        $objPHPExcel->setActiveSheetIndex(0);
+        $objPHPExcel->getActiveSheet()->SetCellValue('B2', 'NAME OF AGENT: '.$result[0]['AgentName']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('B3', 'TEAM LEADER/MANAGER: '.$result[0]['TeamLeaderManager']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('B4', 'CAMPAIGN: '.$result[0]['Campaign']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('C2', 'CALL DATE & TIME: '.$result[0]['DateTime']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('C3', 'EVALUATED BY: '.$result[0]['EvaluatedBy']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('C4', 'PHONE NUMBER : '.$result[0]['PhoneNumber']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('D9', $result[0]['MandatoryIsStated']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('D10', $result[0]['AgentIsPitch']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('D11', $result[0]['MandatoryOptIsStated']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('D12', $result[0]['WaitMandatoryOptIsStated']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('D13', $result[0]['IsRecordingDisclosed']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('D14', $result[0]['IsCustomerPermanentResident']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('D15', $result[0]['IsCustomerAddressVerified']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('D16', $result[0]['IsCustomerAddressAccurate']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('D17', $result[0]['IsCustomerNameVerified']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('D18', $result[0]['IsCustomerNameCapturedCRM']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('D19', $result[0]['IsCustomerAgeVerified']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('D20', $result[0]['IsCustomerAgeBracketCaptured']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('D21', $result[0]['IsCustomerHomeStatusVerified']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('D22', $result[0]['IsCustomerHomeStatusVerifiedCRM']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('D23', $result[0]['IsCustomerEmpploymentStatusVerified']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('D24', $result[0]['IsCustomerEmpploymentStatusVerifiedCRM']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('D25', $result[0]['IsMaritalStatusVerified']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('D26', $result[0]['IsMaritalStatusVerifiedCRM']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('D27', $result[0]['IsMarketingQuestionsRead']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('D28', $result[0]['IsMarketingQuestionsReadCRM']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('D29', $result[0]['IsBreakingCycleFollowed']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('D30', $result[0]['IsPositiveResponsesValidated']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('D31', $result[0]['IsAngentExpressUnderstable']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('D32', $result[0]['IsAppropriateTerms']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('D33', $result[0]['IsVocalQualityPracticed']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('D34', $result[0]['IsPoliteAcknowledgement']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('D35', $result[0]['IsCorrectInformation']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('D36', $result[0]['IsStandardRebuttals']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('D37', $result[0]['IsMandatoryClosingStateMent']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('D38', $result[0]['IsCustomerNotInLine']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('D39', $result[0]['IsNotInterrupted']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('D40', $result[0]['IsEmphatized']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('D41', $result[0]['YesCounts']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('D42', $result[0]['NoCounts']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('D43', $result[0]['NACounts']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('D44', $result[0]['AutoFail']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('D45', $result[0]['QualityScore']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('C5', $result[0]['QualityScore']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('C6', $result[0]['AutoFail']);
+        $objPHPExcel->getActiveSheet()->SetCellValue('C7', $result[0]['ProcessedBy']);
+        
+        $filename=mt_rand(1,100000).'.xlsx'; //just some random filename
+        if ( headers_sent() ) die("**Error: headers sent");
+  
+        header('Content-Type: application/vnd.ms-excel');
+        header('Cache-Control: max-age=0');
+        header('Content-Description: File Transfer');   
+        header('Content-Type: application/vnd.ms-excel');
+        header("Content-Disposition: attachment; filename=" . $filename);    
+        
+        $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');  //downloadable file is in Excel 2003 format (.xls)
+        $objWriter->save('php://output');  //send it to user, of course you can save
+
+    }
         
         public function actionOverview()
         {

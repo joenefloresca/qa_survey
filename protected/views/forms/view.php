@@ -11,8 +11,8 @@ $this->menu=array(
 	array('label'=>'List Forms', 'url'=>array('index')),
 	array('label'=>'Create Forms', 'url'=>array('create')),
 	array('label'=>'Update Forms', 'url'=>array('update', 'id'=>$model->ID)),
-	array('label'=>'Delete Forms', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->ID),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Forms', 'url'=>array('admin')),
+	// array('label'=>'Delete Forms', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->ID),'confirm'=>'Are you sure you want to delete this item?')),
+	// array('label'=>'Manage Forms', 'url'=>array('admin')),
 );
 ?>
 

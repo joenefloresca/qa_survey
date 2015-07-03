@@ -53,7 +53,9 @@
                             'activateParents' => true,
                             'items'=>array(
                                 array('label'=>'Forms', 'url'=>array('/forms/')),
-                                array('label'=>'QA User Management', 'url'=>array('/qaname/')),
+                                array('label'=>'Green Guys', 'url'=>array('/greenguys/')),
+                                array('label'=>'UK Raffles', 'url'=>array('/ukraffles/')),
+                                // array('label'=>'QA User Management', 'url'=>array('/qaname/')),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'))
                             ),
                         ));

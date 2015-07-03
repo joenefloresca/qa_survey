@@ -216,23 +216,16 @@ class Forms extends CActiveRecord
 		));
 	}
         
-        public function getData($id)
-        {
-            $user = Yii::app()->db->createCommand()
-            ->select('ID, AgentName, TeamLeaderManager, Campaign, DateTime, EvaluatedBy,
-                     PhoneNumber, MandatoryIsStated, AgentIsPitch, MandatoryOptIsStated, WaitMandatoryOptIsStated, IsRecordingDisclosed, IsCustomerPermanentResident,
-                     IsCustomerAddressVerified, IsCustomerAddressAccurate, IsCustomerNameVerified, IsCustomerNameCapturedCRM, 
-                     IsCustomerAgeVerified, IsCustomerAgeBracketCaptured, IsCustomerHomeStatusVerified, IsCustomerHomeStatusVerifiedCRM,
-                     IsCustomerEmpploymentStatusVerified, IsCustomerEmpploymentStatusVerifiedCRM, IsMaritalStatusVerified, IsMaritalStatusVerifiedCRM, IsMarketingQuestionsRead, IsMarketingQuestionsReadCRM,
-                     IsBreakingCycleFollowed, IsPositiveResponsesValidated, IsAngentExpressUnderstable, IsAppropriateTerms, IsVocalQualityPracticed,
-                     IsPoliteAcknowledgement, IsCorrectInformation, IsStandardRebuttals, IsMandatoryClosingStateMent, IsCustomerNotInLine,
-                     IsNotInterrupted, IsEmphatized, YesCounts, NoCounts, NACounts, AutoFail, QualityScore, ProcessedBy')
-            ->from('forms')
-            ->where('id=:id', array(':id'=>$id))
-            ->queryAll();
-            
-            return $user;
-        }
+    public function getData($id)
+    {
+        $user = Yii::app()->db->createCommand()
+        ->select('*')
+        ->from('forms')
+        ->where('id=:id', array(':id'=>$id))
+        ->queryAll();
+        
+        return $user;
+    }
 
 	/**
 	 * Returns the static model of the specified AR class.

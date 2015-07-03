@@ -12,7 +12,7 @@ $this->menu=array(
 	array('label'=>'List Forms', 'url'=>array('index')),
 	array('label'=>'Create Forms', 'url'=>array('create')),
 	array('label'=>'View Forms', 'url'=>array('view', 'id'=>$model->ID)),
-	array('label'=>'Manage Forms', 'url'=>array('admin')),
+	// array('label'=>'Manage Forms', 'url'=>array('admin')),
 );
 ?>
 
